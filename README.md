@@ -24,9 +24,10 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 Files in the Repository
 -------------------------------------
-README.md
-CodeBook.md
-run_analysis.R
+
+1. README.md
+2. CodeBook.md
+3. run_analysis.R
 
 Objectives of creating run_analysis.R
 -------------------------------------
@@ -39,14 +40,17 @@ Objectives of creating run_analysis.R
 
 Assumptions
 -------------------------------------
-activity_labels.txt
-features.txt
-test\subject_test.txt
-test\X_test.txt
-test\y_test.txt
-train\subject_train.txt
-train\X_train.txt
-train\y_train.txt
+
+The following files:
+
+1. activity_labels.txt
+2. features.txt
+3. test\subject_test.txt
+4. test\X_test.txt
+5. test\y_test.txt
+6. train\subject_train.txt
+7. train\X_train.txt
+8. train\y_train.txt
 
 are present within the directory passed in the argument of GetTidyData(<directory>) function.
 
