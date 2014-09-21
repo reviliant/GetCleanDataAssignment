@@ -1,6 +1,10 @@
 Getting Clean And tidy DataSet
 =====================================
 
+Author
+-------------------------------------
+Abhishek Guha Thakurta (abhigt.jumech@gmail.com)
+
 Purpose
 -------------------------------------
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. 
@@ -48,4 +52,34 @@ are present within the directory passed in the argument of GetTidyData(<director
 
 Code WalkThrough run_analysis.R
 -------------------------------------
+
+The R file consists of three functions:
+
+getTidyData (directory) --> 
+
+1.Takes directory/folder as parameter.
+2. Reads and Loads activity_labels.txt and features.txt
+3. Loads appropriate mean and standard deviation columns from features.txt
+4. Calls two functions getTestData and getTrainingData by passing arguments(mean_std_cols,actvty_data_set)
+4. Compiles complete tidy dataset
+5. Calculates the mean per subject per activity level/name
+6. Writes the clean dataset to a file in proper desired format
+
+getTestData(mean_std_cols,actvty_data_set) -->
+
+1. Reads and loads subject_test.txt,X_test.txt and y_test.txt.
+2. Combines y_test dataset and activity_name dataset; and loads it into y_test dataset
+3. Combines subject_test,X_test and y_test datasets
+4. Filters variables based upon the mean_std_cols in features dataset.
+5. Change the column names as per the features dataset
+6. Returns a clean test dataset
+
+getTrainingData(mean_std_cols,actvty_data_set) -->
+
+1. Reads and loads subject_train.txt.txt,X_train.txt and y_train.txt.
+2. Combines y_train dataset and activity_name dataset; and loads it into y_train dataset
+3. Combines subject_train,X_train and y_train datasets
+4. Filters variables based upon the mean_std_cols in features dataset.
+5. Change the column names as per the features dataset
+6. Returns a clean training dataset
 
